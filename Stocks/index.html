@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Stocks | Fintech Charts</title>
+    <meta name="description" content="Generated stock market chart reports.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../web/assets/site.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+    <script src="../web/assets/site.js" defer></script>
+  </head>
+  <body data-manifest="../web/data/stocks/site-manifest.json" data-asset-prefix="../">
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Fintech Charts home">
+        <span class="brand-mark">F</span>
+        <span>
+          <strong>Fintech Charts</strong>
+          <small>Stock reports</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="../">Home</a>
+        <a href="#library">Library</a>
+        <a href="../Bitcoin/">Bitcoin</a>
+        <a href="https://github.com/JamesTsetsekas/Fintech" target="_blank" rel="noopener noreferrer">Repo</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="dashboard-shell" aria-labelledby="dashboard-title">
+        <div class="dashboard-copy">
+          <p class="eyebrow">Cron refreshed stock dashboard</p>
+          <h1 id="dashboard-title">Stock chart library</h1>
+          <p class="lede">Generated equity reports covering performance, volatility, correlations, sectors, and technical indicator dashboards.</p>
+          <dl class="metric-strip" id="metric-strip" aria-label="Dashboard metrics">
+            <div>
+              <dt>Charts</dt>
+              <dd>--</dd>
+            </div>
+            <div>
+              <dt>Interactive</dt>
+              <dd>--</dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd>--</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="market-tape" id="market-tape" aria-label="Stock report stats">
+          <span>Stocks</span>
+          <strong>Loading</strong>
+          <small>Latest repo data</small>
+        </div>
+      </section>
+
+      <section class="interactive-section" id="interactive" aria-labelledby="interactive-title">
+        <div class="section-heading">
+          <p class="eyebrow">Hover, zoom, compare</p>
+          <h2 id="interactive-title">Interactive charts</h2>
+        </div>
+        <div class="interactive-layout">
+          <aside class="chart-picker" aria-label="Interactive chart selector">
+            <label class="interactive-search search-box">
+              <span>Find interactive</span>
+              <input id="interactive-search" type="search" placeholder="Performance, volatility..." autocomplete="off">
+            </label>
+            <p class="interactive-count" id="interactive-count">Loading charts</p>
+            <div id="interactive-list" class="interactive-list"></div>
+          </aside>
+          <section class="plot-panel" aria-live="polite">
+            <div class="plot-header">
+              <div>
+                <p class="eyebrow" id="plot-kicker">Stocks</p>
+                <h3 id="plot-title">Loading chart</h3>
+                <p id="plot-summary"></p>
+              </div>
+              <div class="plot-actions" id="scale-actions" hidden>
+                <button type="button" class="segmented active" data-scale="log">Log</button>
+                <button type="button" class="segmented" data-scale="linear">Linear</button>
+              </div>
+            </div>
+            <div id="plot" class="plot"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="library-section" id="library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <p class="eyebrow">Generated report archive</p>
+          <h2 id="library-title">Stock library</h2>
+        </div>
+        <div class="library-toolbar">
+          <label class="search-box">
+            <span>Search</span>
+            <input id="chart-search" type="search" placeholder="AAPL, volatility, sector..." autocomplete="off">
+          </label>
+          <div class="filter-row" id="section-filters" aria-label="Chart sections"></div>
+        </div>
+        <div class="chart-grid" id="chart-grid"></div>
+      </section>
+    </main>
+
+    <dialog class="image-dialog" id="image-dialog">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close image preview">x</button>
+      <figure>
+        <img id="dialog-image" alt="">
+        <figcaption>
+          <strong id="dialog-title"></strong>
+          <span id="dialog-description"></span>
+        </figcaption>
+      </figure>
+    </dialog>
+  </body>
+</html>

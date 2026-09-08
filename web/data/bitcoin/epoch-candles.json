@@ -1,0 +1,75 @@
+{
+  "id": "epoch-candles",
+  "title": "Epoch Candles",
+  "summary_text": "OHLC candles aggregated by Bitcoin halving epoch.",
+  "updated_at": "2026-09-08T18:33:53.589868+00:00",
+  "allow_scale_toggle": false,
+  "default_scale": "log",
+  "axis_guards": {},
+  "scale_axes": [
+    "y"
+  ],
+  "x_value_type": "category",
+  "show_range_selector": false,
+  "series": [
+    {
+      "name": "Epoch OHLC",
+      "type": "candlestick",
+      "x": [
+        "E1",
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "open": [
+        0.000764,
+        12.296016,
+        657.318454,
+        8599.781947,
+        64900.550339
+      ],
+      "high": [
+        31.884444,
+        1162.641686,
+        19803.571807,
+        73742.690083,
+        126094.0
+      ],
+      "low": [
+        0.000613,
+        12.296016,
+        541.117309,
+        8599.781947,
+        53914.819857
+      ],
+      "close": [
+        12.1873,
+        665.841967,
+        8761.299747,
+        64013.44065,
+        78720.0
+      ],
+      "increasing": {
+        "line": {
+          "color": "#3ce38a"
+        },
+        "fillcolor": "rgba(60,227,138,0.58)"
+      },
+      "decreasing": {
+        "line": {
+          "color": "#ff5f63"
+        },
+        "fillcolor": "rgba(255,95,99,0.58)"
+      },
+      "hovertemplate": "%{x}<br>O $%{open:,.0f}<br>H $%{high:,.0f}<br>L $%{low:,.0f}<br>C $%{close:,.0f}<extra>Epoch</extra>"
+    }
+  ],
+  "layout": {
+    "yaxis": {
+      "title": "BTC price (USD)",
+      "type": "log",
+      "tickprefix": "$"
+    }
+  }
+}

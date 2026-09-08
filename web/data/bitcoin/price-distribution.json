@@ -1,0 +1,57 @@
+{
+  "id": "price-distribution",
+  "title": "Price Distribution",
+  "summary_text": "Count of daily closes by long-term BTC/USD price bucket.",
+  "updated_at": "2026-09-08T18:33:54.339528+00:00",
+  "allow_scale_toggle": false,
+  "default_scale": "linear",
+  "axis_guards": {},
+  "scale_axes": [
+    "y"
+  ],
+  "x_value_type": "number",
+  "show_range_selector": false,
+  "series": [
+    {
+      "name": "Trading days",
+      "type": "bar",
+      "orientation": "h",
+      "x": [
+        556,
+        94,
+        175,
+        410,
+        381,
+        1331,
+        1111,
+        2181,
+        219
+      ],
+      "y": [
+        "Not valued",
+        "$0.01 - $0.10",
+        "$0.10 - $1",
+        "$1 - $10",
+        "$10 - $100",
+        "$100 - $1k",
+        "$1k - $10k",
+        "$10k - $100k",
+        "$100k - $1M"
+      ],
+      "marker": {
+        "color": "#f5c84b"
+      },
+      "hovertemplate": "%{y}<br>%{x:,} days<extra>Price bucket</extra>"
+    }
+  ],
+  "layout": {
+    "xaxis": {
+      "title": "Daily closes"
+    },
+    "yaxis": {
+      "title": "BTC/USD bucket",
+      "automargin": true
+    },
+    "hovermode": "closest"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "node-count",
+  "title": "Node Count",
+  "summary_text": "Latest node software snapshot from 2026-03-19.",
+  "updated_at": "2026-09-08T18:33:53.766019+00:00",
+  "allow_scale_toggle": false,
+  "default_scale": "linear",
+  "axis_guards": {},
+  "scale_axes": [
+    "y"
+  ],
+  "x_value_type": "number",
+  "show_range_selector": false,
+  "series": [
+    {
+      "name": "Nodes",
+      "type": "bar",
+      "orientation": "h",
+      "x": [
+        1.0,
+        21.0,
+        50.0,
+        69.0,
+        72.0,
+        79.0,
+        1814.0,
+        3449.0,
+        10101.0,
+        12336.0,
+        77344.0
+      ],
+      "y": [
+        "Bitcoin Unlimited",
+        "Bitcoin Classic",
+        "other",
+        "Bither",
+        "bread",
+        "btcsuite",
+        "bitcoinj / wallets",
+        "other (excluded)",
+        "BIP110",
+        "Bitcoin Knots",
+        "Bitcoin Core"
+      ],
+      "marker": {
+        "color": "#f5c84b"
+      },
+      "hovertemplate": "%{y}<br>%{x:,} nodes<extra>Nodes</extra>"
+    }
+  ],
+  "layout": {
+    "xaxis": {
+      "title": "Reachable nodes"
+    },
+    "yaxis": {
+      "automargin": true
+    }
+  }
+}
